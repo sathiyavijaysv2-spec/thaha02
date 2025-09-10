@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .success-message {
+            text-align: center;
+            color: #155724;
+            background-color: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Product Registration</h2>
+        <form id="registrationForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="address" placeholder="Your Address" required></textarea>
+            <input type="text" id="productName" placeholder="Product Name" required>
+            <input type="number" id="productBudget" placeholder="Product Budget" required>
+            <textarea id="deliveryAddress" placeholder="Delivery Address" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="success-message" id="successMessage">
+            Order Confirmed! ✅
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual form submission
+
+            // Optional: Collect data if needed
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const productName = document.getElementById('productName').value;
+            const productBudget = document.getElementById('productBudget').value;
+            const deliveryAddress = document.getElementById('deliveryAddress').value;
+
+            // You can send this data to server/database here if needed
+
+            // Show confirmation message
+            successMessage.style.display = 'block';
+
+            // Reset form
+            form.reset();
+        });
+    </script>
+</body>
+</html>
