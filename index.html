@@ -66,11 +66,9 @@
             <input type="number" id="productBudget" placeholder="Product Budget" required>
             <textarea id="deliveryAddress" placeholder="Delivery Address" required></textarea>
             <button type="submit">Submit</button>
-        </form>
         <div class="success-message" id="successMessage">
-            Order Confirmed! ✅
+            Order Confirmed! 
         </div>
-    </div>
 
     <script>
         const form = document.getElementById('registrationForm');
@@ -89,11 +87,13 @@
             // You can send this data to server/database here if needed
 
             // Show confirmation message
-            successMessage.style.display = 'block';
+            successMessage.style.display = 'block'
 
             // Reset form
             form.reset();
         });
     </script>
+    <a href="https://thaha011.vercel.app/" class="back-home">⬅ Back to Home</a>
+</script>
 </body>
 </html>
